@@ -16,4 +16,11 @@ ingredientsChange = new EventEmitter<Ingredient[]>();
       this.ingredients.push(ingredient);
       this.ingredientsChange.emit(this.ingredients.slice());
     }
+
+    addIngredients(auxIngredients: Ingredient[]){
+      for (const i of auxIngredients) {
+          this.ingredients.push(i);
+      }
+      this.ingredientsChange.emit(this.ingredients.slice());
+    }
 }
