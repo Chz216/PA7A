@@ -19,7 +19,7 @@ ingredientsChange = new EventEmitter<Ingredient[]>();
 
     addIngredients(auxIngredients: Ingredient[]){
       for (const i of auxIngredients) {
-          this.ingredients.push(i);
+        this.ingredients.push(i);
       }
       this.ingredientsChange.emit(this.ingredients.slice());
     }
