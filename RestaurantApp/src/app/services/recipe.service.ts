@@ -1,11 +1,11 @@
 import { Recipes } from "../recipes/recipes.model";
-import { EventEmitter, Injectable } from "../../../node_modules/@angular/core";
+import { Injectable } from "../../../node_modules/@angular/core";
 import { Ingredient } from "../shared/ingredient.model";
 import { IngredientsService } from "./ingredients.service";
 
 @Injectable()
 export class RecipeService {
-  recipeSelected = new EventEmitter<Recipes>();
+  //recipeSelected = new EventEmitter<Recipes>();
 
   private recipe: Recipes[] = [
     new Recipes('Recipe a of pizza', 'This is a simply test', 'https://d25rq8gxcq0p71.cloudfront.net/language-guide/758/pepperoni%20pizza.jpg', [
@@ -28,6 +28,10 @@ export class RecipeService {
 
   getRecipes(){
     return this.recipe.slice();
+  }
+
+  getRecipe(index: number){
+      return this.recipe[index];
   }
 
   addIngredientsToShoppingList(ingredients: Ingredient[]){
