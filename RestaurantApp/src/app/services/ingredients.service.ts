@@ -1,8 +1,10 @@
 import { Ingredient } from "../shared/ingredient.model";
 import { EventEmitter } from '@angular/core';
+import { Subject } from "../../../node_modules/rxjs";
 
 export class IngredientsService {
 ingredientsChange = new EventEmitter<Ingredient[]>();
+startedEditing = new Subject<number>();
     ingredients: Ingredient [] = [
       new Ingredient ('Tomatoes', 5),
       new Ingredient ('Apples', 3)
@@ -10,6 +12,10 @@ ingredientsChange = new EventEmitter<Ingredient[]>();
 
     getIngredients() {
       return this.ingredients.slice();
+    }
+
+    getIngredient(index: number){
+      return this.ingredients[index];
     }
 
     addIngredient(ingredient: Ingredient){
