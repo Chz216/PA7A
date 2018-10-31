@@ -14,8 +14,8 @@ import { RecipesEditComponent } from './recipes/recipes-edit/recipes-edit.compon
     },
     {
       path: 'recipes', component: RecipesComponent, children: [
-        { path: '', component: RecipesStartComponent },
-        { path: 'new', component: RecipesEditComponent },
+      { path: '', component: RecipesStartComponent },
+      { path: 'new', component: RecipesEditComponent },
       { path: ':id', component: RecipesDetailComponent },
       { path: ':id/edit', component: RecipesEditComponent }
       ]
