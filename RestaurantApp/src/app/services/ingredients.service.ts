@@ -1,5 +1,5 @@
 import { Ingredient } from "../shared/ingredient.model";
-import { EventEmitter } from '@angular/core';
+//import { EventEmitter } from '@angular/core';
 import { Subject } from "../../../node_modules/rxjs";
 
 export class IngredientsService {
