@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { RecipesStartComponent } from './recipes/recipes-start/recipes-start.component';
 import { RecipesEditComponent } from './recipes/recipes-edit/recipes-edit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SigninComponent } from './auth/signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RecipesItemComponent,
     ShoppingEditComponent,
     RecipesStartComponent,
-    RecipesEditComponent
+    RecipesEditComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,

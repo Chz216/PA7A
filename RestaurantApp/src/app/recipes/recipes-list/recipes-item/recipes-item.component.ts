@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Recipes } from '../../recipes.model';
+import { RecipeService } from '../../../services/recipe.service';
 
 
 @Component({
@@ -11,6 +12,8 @@ export class RecipesItemComponent implements OnInit {
 @Input() recipe: Recipes;
 @Input() index: number;
 
+
+  constructor() { }
 
   ngOnInit() {
   }
